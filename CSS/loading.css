@@ -1,0 +1,192 @@
+html, body {
+    margin: 0;
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    aspect-ratio: 16/9;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: Agency;
+    src: url("../RESOURCES/FONTS/Agency.ttf");
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        animation-timing-function: ease-out;
+        filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 1));
+    }
+    50% {
+        transform: scale(1.75);
+        animation-timing-function: ease-in;
+        filter: drop-shadow(6px 6px 5px rgba(0, 0, 0, 0.5));
+    }
+    100% {
+        transform: scale(1);
+        filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 1));
+    }
+}
+
+@keyframes text_pulse {
+    0% {
+        font-size: 25px;
+        animation-timing-function: ease-in-out;
+        filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 1));
+    }
+    50% {
+        font-size: 30px;
+        animation-timing-function: ease-in-out;
+        filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.5));
+    }
+    100% {
+        font-size: 25px;
+        filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 1));
+    }
+}
+
+@keyframes hide {
+    0% {}
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes show {
+    0% {}
+    100% {
+        opacity: 1;
+    }
+}
+
+#loadingContainer {
+    display: flex;
+    position: absolute;
+    animation: hide 2s 5s linear forwards;
+    background-color: rgb(90, 90, 90);
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#dot-1 {
+    background-image: url("../RESOURCES/IMAGES/ball.png");
+    background-size: cover;
+    animation: pulse 2s infinite 1s linear;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    margin: 10px;
+}
+
+#dot-2 {
+    background-image: url("../RESOURCES/IMAGES/ball.png");
+    background-size: cover;
+    animation: pulse 2s infinite 1.25s;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    margin: 10px;
+}
+
+#dot-3 {
+    background-image: url("../RESOURCES/IMAGES/ball.png");
+    background-size: cover;
+    animation: pulse 2s infinite 1.5s linear;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    margin: 10px;
+}
+
+#loadingText {
+    position: absolute;
+    top: 40%;
+    color: white;
+    animation: text_pulse 5s infinite 1.5s linear;
+    overflow: visible;
+    font-family: Agency, "Arial";
+    font-size: 25px;
+}
+
+.eyeLid {
+    align-self: center;
+    justify-self: center;
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    height: 100%;
+    width: 300%;
+    filter: blur(50px);
+}
+
+@keyframes DissipateText {
+    0% {
+        text-shadow: 0px 0px 30px rgba(255, 255, 255, 0.5);
+        opacity: 1;
+        filter: blur(0px);
+    }
+    100% {
+        text-shadow: 0px 0px 100px rgba(255, 255, 255, 1);
+        opacity: 0;
+        filter: blur(100px);
+    }
+}
+
+#lidText {
+    color: rgb(117, 117, 117);
+    font-size: 50px;
+    opacity: 0;
+    animation: show 3s 7s ease-in forwards;
+    transition: text-shadow 0.5s linear;
+    text-shadow: 0px 0px 30px rgba(255, 255, 255, 0);
+    filter: blur(0px);
+}
+#lidText:hover {
+    text-shadow: 0px 0px 30px rgba(255, 255, 255, 0.747);
+}
+
+@keyframes lidUp {
+    0% {
+        top: -50%;
+    }
+    100% {
+        top: -150%;
+    }
+}
+
+@keyframes lidDown {
+    0% {
+        bottom: -50%;
+    }
+    100% {
+        bottom: -150%;
+    }
+}
+
+.lid1 {
+    top: -50%;
+}
+
+.lid2 {
+    bottom: -50%;
+}
+
+.blockSelect {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+}
+
+#background {
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chargement</title>
+    <link rel="stylesheet" href="CSS/loading.css">
+</head>
+
+<body>
+    <div id="background"></div>
+    <div id="gameContainer">
+        <div class="eyeLid lid1"></div>
+        <div class="eyeLid lid2"></div>
+        <div class="blockSelect" id="lidText">OPEN YOUR EYES</div>
+    </div>
+    <script>
+            const lidText = document.getElementById("lidText");
+            const lid1 = document.getElementsByClassName("lid1")[0];
+            const lid2 = document.getElementsByClassName("lid2")[0];
+            const bg = document.getElementById("background");
+
+            lidText.addEventListener("click", () => {
+                lidText.style.animation = "DissipateText 3s forwards";
+                lid1.style.animation = "lidUp 3s 0.5s forwards";
+                lid2.style.animation = "lidDown 3s 0.5s forwards";
+                bg.style.animation = "show 3s forwards"
+            });
+    </script>
+    <div id="loadingContainer">
+        <div id="loadingText">LOADING!</div>
+        <div id="dot-1"></div>
+        <div id="dot-2"></div>
+        <div id="dot-3"></div>
+    </div>
+    <script>
+        setTimeout(function () {
+            document.getElementById("loadingContainer").remove();
+        }, 7000);
+    </script>
+</body>
+
+</html>
