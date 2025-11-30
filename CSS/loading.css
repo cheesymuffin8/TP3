@@ -116,8 +116,6 @@ html, body {
 }
 
 .eyeLid {
-    align-self: center;
-    justify-self: center;
     position: absolute;
     background-color: rgb(0, 0, 0);
     height: 100%;
@@ -136,6 +134,15 @@ html, body {
         opacity: 0;
         filter: blur(100px);
     }
+}
+
+#gameContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
 #lidText {
@@ -177,15 +184,11 @@ html, body {
     bottom: -50%;
 }
 
-.blockSelect {
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none;
-}
-
 #background {
+    display: flex;
     background-color: white;
-    position: absolute;
+    position: relative;
+    justify-content: center;
     width: 100%;
     height: 100%;
     opacity: 0;

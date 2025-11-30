@@ -6,10 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chargement</title>
     <link rel="stylesheet" href="CSS/loading.css">
+    <link rel="stylesheet" href="CSS/baseStyles.css">
 </head>
 
 <body>
-    <div id="background"></div>
+    <div id="background" style="background-color: black;">
+        <a class="moveLink" href="HTML/outside_02.html" style="left: 45%; top: 46%; rotate: -90deg;"></a>
+        <img src="RESOURCES/IMAGES/Outside_01.avif" style="height: 100%; aspect-ratio: 16/10;" alt="Ouside">
+    </div>
     <div id="gameContainer">
         <div class="eyeLid lid1"></div>
         <div class="eyeLid lid2"></div>
@@ -20,12 +24,23 @@
             const lid1 = document.getElementsByClassName("lid1")[0];
             const lid2 = document.getElementsByClassName("lid2")[0];
             const bg = document.getElementById("background");
+            const gameContainer = document.getElementById("gameContainer")
 
+            let debounce = true
+        
             lidText.addEventListener("click", () => {
-                lidText.style.animation = "DissipateText 3s forwards";
-                lid1.style.animation = "lidUp 3s 0.5s forwards";
-                lid2.style.animation = "lidDown 3s 0.5s forwards";
-                bg.style.animation = "show 3s forwards"
+                if (debounce === true) {
+                    debounce = false
+                    const OpenEyesSFX = new Audio("RESOURCES/SOUNDS/SFXS/OpenEyes.mp3")
+                    OpenEyesSFX.play();
+                    lidText.style.animation = "DissipateText 3s forwards";
+                    lid1.style.animation = "lidUp 3s 0.5s forwards";
+                    lid2.style.animation = "lidDown 3s 0.5s forwards";
+                    bg.style.animation = "show 3s forwards"
+                    setTimeout(() => {
+                        gameContainer.remove()
+                    }, 3000)
+                }
             });
     </script>
     <div id="loadingContainer">
