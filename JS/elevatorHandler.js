@@ -41,6 +41,8 @@ if (sessionStorage.getItem("doorsClosed") === null) {
         setTimeout(() => {
             const ElevatorDoorSFX = new Audio("../../RESOURCES/SOUNDS/SFXS/ElevatorDoorSFX.mp3")
             ElevatorDoorSFX.play();
+            const ElevatorChime = new Audio("../../RESOURCES/SOUNDS/SFXS/ElevatorChime.mp3")
+            ElevatorChime.play();
             LeftDoor.style.animation = "OpenLeftDoor 4s forwards"
             RightDoor.style.animation = "OpenRightDoor 4s forwards"
             sessionStorage.setItem("buttonDebounce", "false")
@@ -50,8 +52,8 @@ if (sessionStorage.getItem("doorsClosed") === null) {
                 button.style.opacity = 1
             }
             FloorNumberText.textContent = "- " + CurrentFileNumber + " -"
-
         }, 8250);
+
     }    
 }
 
