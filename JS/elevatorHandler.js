@@ -1,9 +1,26 @@
 const ElevatorButtons = document.getElementsByClassName("elevatorButton")
 const LeftDoor = document.getElementById("LDoor")
 const RightDoor = document.getElementById("RDoor")
+const FloorNumberText = document.getElementById("floorTextDiv")
+
+const CurrentFileNumber = window.location.pathname.substring(window.location.pathname.lastIndexOf('/')+1).match(/\d+/)[0].replace(/^0+/, "") || "0";
 
 if (sessionStorage.getItem("buttonDebounce") === null) {
     sessionStorage.setItem("buttonDebounce", "false");
+}
+
+if (sessionStorage.getItem("floor") === null) {
+    sessionStorage.setItem("floor", "0");
+}
+if (sessionStorage.getItem("lastFloor") === null) {
+    sessionStorage.setItem("lastFloor", CurrentFileNumber);
+}
+if (Number(sessionStorage.getItem("floor")) > Number(sessionStorage.getItem("lastFloor"))) {
+    FloorNumberText.textContent = "▴" + sessionStorage.getItem("floor")
+} else if (Number(sessionStorage.getItem("floor")) < Number(sessionStorage.getItem("lastFloor"))) {
+    FloorNumberText.textContent = "▾" + sessionStorage.getItem("floor")
+} else if (Number(sessionStorage.getItem("floor")) == Number(sessionStorage.getItem("lastFloor"))) {
+    FloorNumberText.textContent = "-" + sessionStorage.getItem("floor") + "-"
 }
 
 if (sessionStorage.getItem("doorsClosed") === null) {
@@ -19,16 +36,22 @@ if (sessionStorage.getItem("doorsClosed") === null) {
                 button.style.pointerEvents = "none"
                 button.style.opacity = 0.5
         }
+        const ElevatorSFX = new Audio("../../RESOURCES/SOUNDS/SFXS/Elevator.mp3")
+        ElevatorSFX.play();
         setTimeout(() => {
-            LeftDoor.style.animation = "OpenLeftDoor 3s forwards"
-            RightDoor.style.animation = "OpenRightDoor 3s forwards"
+            const ElevatorDoorSFX = new Audio("../../RESOURCES/SOUNDS/SFXS/ElevatorDoorSFX.mp3")
+            ElevatorDoorSFX.play();
+            LeftDoor.style.animation = "OpenLeftDoor 4s forwards"
+            RightDoor.style.animation = "OpenRightDoor 4s forwards"
             sessionStorage.setItem("buttonDebounce", "false")
             sessionStorage.setItem("doorsClosed", "false")
             for (let button of ElevatorButtons) {
                 button.style.pointerEvents = "auto"
                 button.style.opacity = 1
             }
-        }, 3000);
+            FloorNumberText.textContent = "- " + CurrentFileNumber + " -"
+
+        }, 8250);
     }    
 }
 
@@ -50,14 +73,20 @@ function moveFloor(elevatorButton, buttonList) {
     const CurrentButton = elevatorButton.currentTarget
     const FloorDirectionStr = CurrentButton.textContent
 
-    let FloorNum = 0
+    if (CurrentFileNumber === FloorDirectionStr) {
+        return
+    } else {
+        const ElevatorButtonPressSFX = new Audio("../../RESOURCES/SOUNDS/SFXS/ElevatorButtonPress.mp3")
+        ElevatorButtonPressSFX.play();
+    }
 
     if (sessionStorage.getItem("buttonDebounce") === "false" || sessionStorage.getItem("buttonDebounce") === null) {
         sessionStorage.setItem("buttonDebounce", "true")
         if (isNumeric(FloorDirectionStr)) {
-            FloorNum = Number(FloorDirectionStr)
+            sessionStorage.setItem("lastFloor", CurrentFileNumber)
+            sessionStorage.setItem("floor", FloorDirectionStr)
         } else if (FloorDirectionStr === "★G") {
-            FloorNum = 0
+            sessionStorage.setItem("floor", "0")
         }
 
         sessionStorage.setItem("doorsClosed", "true")
@@ -68,12 +97,14 @@ function moveFloor(elevatorButton, buttonList) {
         }
 
         CurrentButton.style.border = "0.4vh rgba(255, 255, 255, 1) solid"
-        LeftDoor.style.animation = "CloseLeftDoor 3s forwards"
-        RightDoor.style.animation = "CloseRightDoor 3s forwards"
+        LeftDoor.style.animation = "CloseLeftDoor 4s forwards"
+        RightDoor.style.animation = "CloseRightDoor 4s forwards"
+        const ElevatorDoorSFX = new Audio("../../RESOURCES/SOUNDS/SFXS/ElevatorDoorSFX.mp3")
+        ElevatorDoorSFX.play();
 
         setTimeout(() => {
-            window.location.href = Floors[FloorNum]
-        }, 3000);
+            window.location.href = Floors[Number(sessionStorage.getItem("floor"))]
+        }, 4000);
     }
 }
 

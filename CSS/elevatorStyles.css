@@ -1,6 +1,15 @@
 @keyframes OpenRightDoor {
     0% {
         transform: translate(0%);
+        animation-timing-function: ease-in-out;
+    }
+    5% {
+        transform: translate(0%);
+        animation-timing-function: ease-in-out;
+    }
+    15% {
+        transform: translate(-0.5%);
+        animation-timing-function: ease-in-out;
     }
     100% {
         transform: translate(-15%);
@@ -9,6 +18,15 @@
 @keyframes OpenLeftDoor {
     0% {
         transform: translate(0%);
+        animation-timing-function: ease-in-out;
+    }
+    5% {
+        transform: translate(0%);
+        animation-timing-function: ease-in-out;
+    }
+    15% {
+        transform: translate(0.5%);
+        animation-timing-function: ease-in-out;
     }
     100% {
         transform: translate(15%);
@@ -17,6 +35,15 @@
 @keyframes CloseRightDoor {
     0% {
         transform: translate(-15%);
+        animation-timing-function: ease-in-out;
+    }
+    5% {
+        transform: translate(-15%);
+        animation-timing-function: ease-in-out;
+    }
+    15% {
+        transform: translate(-14.5%);
+        animation-timing-function: ease-in-out;
     }
     100% {
         transform: translate(0%);
@@ -25,6 +52,15 @@
 @keyframes CloseLeftDoor {
     0% {
         transform: translate(15%);
+        animation-timing-function: ease-in-out;
+    }
+    5% {
+        transform: translate(15%);
+        animation-timing-function: ease-in-out;
+    }
+    15% {
+        transform: translate(14.5%);
+        animation-timing-function: ease-in-out;
     }
     100% {
         transform: translate(0%);
@@ -42,7 +78,8 @@
 }
 
 #buttonsSection {
-    position: relative;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
     top: 24%;
     display: flex;
     justify-content: center;
@@ -81,4 +118,25 @@
         -0.2vh 0.2vh 0.2vh #494949,
         0.2vh -0.2vh 0.2vh #494949;
     margin: 1.4vh;
+}
+
+@font-face {
+    font-family: digital-7;
+    src: url("../RESOURCES/FONTS/digital-7.ttf");
+}
+
+#floorTextDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    width: 52%;
+    height: 17.5%;
+    top: 2.5%;
+    left: 23%;
+    text-align: center;
+    font-family: digital-7, Arial, Helvetica, sans-serif;
+    font-size: 7vh;
+    color: rgb(255, 0, 0);
 }
