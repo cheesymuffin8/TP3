@@ -37,7 +37,7 @@ function isNumeric(num) {
 }
 
 const Floors = {
-    0: "elevatorGroundFloor.html",
+    0: "floor_00.html",
     1: "floor_01.html",
     2: "floor_02.html",
     3: "floor_03.html",
