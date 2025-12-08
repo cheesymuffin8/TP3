@@ -1,0 +1,335 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+#background {
+    width: 100%;
+    height: 100%;
+    min-height: 200vh;
+    background:
+        url(../../RESOURCES/IMAGES/TEXTURES/wood_table_ao_2k.jpg),
+        url(../../RESOURCES/IMAGES/TEXTURES/wood_table_diff_2k.jpg);
+    background-repeat: both repeat;
+    background-size: 30%;
+    background-blend-mode: multiply;
+}
+
+#topBar {
+    display: flex;
+    position: fixed;
+    top: 0%;
+    background:
+        url(../RESOURCES/IMAGES/TEXTURES/wood_table_worn_ao_2k.jpg),
+        url(../RESOURCES/IMAGES/TEXTURES/wood_table_worn_diff_2k.jpg);
+    background-repeat: both repeat;
+    background-size: 30%;
+    background-blend-mode: multiply;
+    box-shadow:
+    10px 0px 10px rgba(0, 0, 0, 0.5),
+    10px 0px 50px rgba(0, 0, 0, 0.5),
+    10px 0px 50px rgba(0, 0, 0, 0.5),
+    -10px 0px 50px rgba(0, 0, 0, 0.5),
+    -10px 0px 50px rgba(0, 0, 0, 0.5),-10px 0px 50px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 25%;
+    padding-left: 5vh;
+    z-index: 1;
+}
+
+.myMusicStylesTXT {
+    display: inline-block;
+    font-size: 4vh;
+    color: rgb(145, 103, 65);
+}
+
+@font-face {
+    font-family: "schoolbell";
+    src: url(../RESOURCES/FONTS/Schoolbell-Regular.ttf);
+}
+.w1 {
+    font-family: "schoolbell", Arial, Helvetica, sans-serif;
+}
+@font-face {
+    font-family: "sendFlowers";
+    src: url(../RESOURCES/FONTS/SendFlowers-Regular.ttf);
+}
+.w2 {
+    font-family: "sendFlowers", Arial, Helvetica, sans-serif;
+}
+@font-face {
+    font-family: "satisfy";
+    src: url(../RESOURCES/FONTS/Satisfy-Regular.ttf);
+}
+.w3 {
+    font-family: "satisfy", Arial, Helvetica, sans-serif;
+}
+@font-face {
+    font-family: "skranji";
+    src: url(../RESOURCES/FONTS/Skranji-Regular.ttf);
+}
+.w4 {
+    font-family: "skranji", Arial, Helvetica, sans-serif;
+}
+@font-face {
+    font-family: "sankofaDisplay";
+    src: url(../RESOURCES/FONTS/SankofaDisplay-Regular.ttf);
+}
+.w5 {
+    font-family: "sankofaDisplay", Arial, Helvetica, sans-serif;
+}
+@font-face {
+    font-family: "rubikIso";
+    src: url(../RESOURCES/FONTS/RubikIso-Regular.ttf);
+}
+.w6 {
+    font-family: "rubikIso", Arial, Helvetica, sans-serif;
+}
+@font-face {
+    font-family: "rosarivo";
+    src: url(../RESOURCES/FONTS/Rosarivo-Regular.ttf);
+}
+.w7 {
+    font-family: "rosarivo", Arial, Helvetica, sans-serif;
+}
+@font-face {
+    font-family: "sixCaps";
+    src: url(../RESOURCES/FONTS/SixCaps-Regular.ttf);
+}
+.w8 {
+    font-family: "sixCaps", Arial, Helvetica, sans-serif;
+}
+@font-face {
+    font-family: "rubikMonoOne";
+    src: url(../RESOURCES/FONTS/RubikMonoOne-Regular.ttf);
+}
+.w9 {
+    font-family: "rubikMonoOne", Arial, Helvetica, sans-serif;
+}
+@font-face {
+    font-family: "redressed";
+    src: url(../RESOURCES/FONTS/Redressed-Regular.ttf);
+}
+.w10 {
+    font-family: "redressed", Arial, Helvetica, sans-serif;
+}
+@font-face {
+    font-family: "shizuru";
+    src: url(../RESOURCES/FONTS/Shizuru-Regular.ttf);
+}
+.w11 {
+    font-family: "shizuru", Arial, Helvetica, sans-serif;
+}
+@font-face {
+    font-family: "shareTechMono";
+    src: url(../RESOURCES/FONTS/ShareTechMono-Regular.ttf);
+}
+.w12 {
+    font-family: "shareTechMono", Arial, Helvetica, sans-serif;
+}
+@font-face {
+    font-family: "silkscreen";
+    src: url(../RESOURCES/FONTS/Silkscreen-Regular.ttf);
+}
+.w13 {
+    font-family: "silkscreen", Arial, Helvetica, sans-serif;
+}
+
+#litAny {
+    position: absolute;
+    bottom: 0%;
+    color: rgb(129, 96, 67);
+    font-size: 2.5vh;
+    margin-bottom: 0.75%;
+    font-family: "sendFlowers", Arial, Helvetica, sans-serif;
+}
+
+#musicPlayer {
+    display: flex;
+    position: fixed;
+    bottom: 1%;
+    justify-self: center;
+    width: 100vh;
+    height: 20vh;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 1vh;
+    backdrop-filter: blur(1vh);
+}
+
+#playerCover {
+    display: flex;
+    position: absolute;
+    align-self: center;
+    left: 2.25vh;
+    aspect-ratio: 1/1;
+    height: 77.5%;
+    background-size: contain;
+    border-radius: 1vh;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url(../RESOURCES/FONTS/Inter-VariableFont_opsz\,wght.ttf);
+}
+
+#playerTitle {
+    display: flex;
+    position: absolute;
+    top: 2.25vh;
+    left: 19vh;
+    height: 20%;
+    width: 77.5%;
+    color: rgb(255,255,255);
+    /*background-color: black;*/
+    background-size: cover;
+    border-radius: 1vh;
+    align-items: center;
+    font-size: 4vh;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+#playerArtist {
+    display: flex;
+    position: absolute;
+    top: 6.4vh;
+    left: 19vh;
+    height: 13%;
+    width: 77.5%;
+    color: rgb(255,255,255);
+    /*background-color: black;*/
+    background-size: contain;
+    border-radius: 1vh;
+    align-items: center;
+    font-size: 2vh;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    white-space: nowrap;
+}
+
+#playerAlbum {
+    display: flex;
+    position: absolute;
+    top: 9vh;
+    left: 19vh;
+    height: 13%;
+    width: 77.5%;
+    color: rgb(255,255,255);
+    /*background-color: black;*/
+    background-size: contain;
+    border-radius: 1vh;
+    align-items: center;
+    font-size: 2vh;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    white-space: nowrap;
+}
+
+#playerAudio {
+    display: flex;
+    position: absolute;
+    top: 12.15vh;
+    left: 19vh;
+    width: 77.5%;
+    height: 5.5vh;
+    color: rgb(255,255,255);
+    background-size: contain;
+    align-items: center;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+
+#playerAudio::-webkit-media-controls-enclosure {
+  border-radius: 1vh;
+}
+
+#recordShelvesContainer {
+    display: flex;
+    position: absolute;
+    /* background-image: url(../RESOURCES/IMAGES/placeholder.png); */
+    top: 30vh;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    align-items: start;
+    justify-self: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 95%;
+    height: 165vh;
+}
+
+.shelfRow {
+    display: flex;
+    background-image: url(../RESOURCES/IMAGES/Shelf.png);
+    width: 30%;
+    aspect-ratio: 16/9;
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: space-evenly;
+    align-items: end;
+    filter: drop-shadow(0px -10px 20px) contrast(125%);
+}
+
+@keyframes growRecordGroup {
+    0% {
+        transform: scale(1) translate(0%,0%)
+    }
+    100%{
+        transform: scale(1.1) translate(0%,-3%)
+    }
+}
+
+@keyframes shrinkRecordGroup {
+    0% {
+        transform: scale(1.1) translate(0%,-3%)
+    }
+    100%{
+        transform: scale(1) translate(0%,0%)
+    }
+}
+
+.recordGroup {
+    display: flex;
+    position: relative;
+    bottom: 10%;
+    aspect-ratio: 1/1;
+    margin: 0px;
+    background-color: black;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.recordCover {
+    height: 100%;
+    width: 100%;
+}
+
+@keyframes showRecord {
+    0% {
+        transform: translate(0%,0%);
+    }
+    100%{
+        transform: translate(0%,-60%);
+    }
+}
+
+@keyframes hideRecord {
+    0% {
+        transform: translate(0%,-60%);
+    }
+    100%{
+        transform: translate(0%,0%);
+    }
+}
+
+.recordSelf {
+    position: absolute;
+    height: 90%;
+    width: 90%;
+    z-index: -1;
+}

@@ -3,6 +3,8 @@ const LeftDoor = document.getElementById("LDoor")
 const RightDoor = document.getElementById("RDoor")
 const FloorNumberText = document.getElementById("floorTextDiv")
 
+const moveLinks = document.getElementsByClassName("moveLink")
+
 const CurrentFileNumber = window.location.pathname.substring(window.location.pathname.lastIndexOf('/')+1).match(/\d+/)[0].replace(/^0+/, "") || "0";
 
 if (sessionStorage.getItem("buttonDebounce") === null) {
@@ -29,8 +31,11 @@ if (sessionStorage.getItem("doorsClosed") === null) {
     RightDoor.style.transform = "translate(-15%)";
 } else {
     if (sessionStorage.getItem("doorsClosed") === "false") {
-        LeftDoor.style.transform = "translate(0%)";
-        RightDoor.style.transform = "translate(0%)";
+        LeftDoor.style.transform = "translate(15%)";
+        RightDoor.style.transform = "translate(-15%)";
+        for (let moveLink of moveLinks) {
+            moveLink.style.right = "45.5%"
+        }
     } else {
         for (let button of ElevatorButtons) {
                 button.style.pointerEvents = "none"
@@ -47,13 +52,17 @@ if (sessionStorage.getItem("doorsClosed") === null) {
             RightDoor.style.animation = "OpenRightDoor 4s forwards"
             sessionStorage.setItem("buttonDebounce", "false")
             sessionStorage.setItem("doorsClosed", "false")
-            for (let button of ElevatorButtons) {
-                button.style.pointerEvents = "auto"
-                button.style.opacity = 1
-            }
             FloorNumberText.textContent = "- " + CurrentFileNumber + " -"
+            setTimeout(() => {
+                for (let button of ElevatorButtons) {
+                    button.style.pointerEvents = "auto"
+                    button.style.opacity = 1
+                }
+                for (let moveLink of moveLinks) {
+                    moveLink.style.right = "45.5%"
+                }
+            }, 4000);
         }, 8250);
-
     }    
 }
 
@@ -74,14 +83,17 @@ const Floors = {
 function moveFloor(elevatorButton, buttonList) {
     const CurrentButton = elevatorButton.currentTarget
     const FloorDirectionStr = CurrentButton.textContent
+    const targetFloor = FloorDirectionStr === "★G" ? "0" : FloorDirectionStr;
 
-    if (CurrentFileNumber === FloorDirectionStr) {
+    if (CurrentFileNumber === targetFloor) {
         return
     } else {
         const ElevatorButtonPressSFX = new Audio("../../RESOURCES/SOUNDS/SFXS/ElevatorButtonPress.mp3")
         ElevatorButtonPressSFX.play();
     }
-
+    for (let moveLink of moveLinks) {
+        moveLink.style.right = "1000%"
+    }
     if (sessionStorage.getItem("buttonDebounce") === "false" || sessionStorage.getItem("buttonDebounce") === null) {
         sessionStorage.setItem("buttonDebounce", "true")
         if (isNumeric(FloorDirectionStr)) {

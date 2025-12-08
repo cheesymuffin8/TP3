@@ -1,0 +1,15 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: url(../../RESOURCES/IMAGES/TEXTURES/plywood_diff_2k.jpg);
+    background-repeat: repeat;
+    background-size: 30%;
+}
+
+#book {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    height: 100vh;
+}
