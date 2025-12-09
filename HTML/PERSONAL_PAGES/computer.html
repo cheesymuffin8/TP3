@@ -12,9 +12,16 @@
         <img class="blockSelect" id="pc-img" src="../../RESOURCES/IMAGES/PC.png" alt="">
         <img class="blockSelect" id="wallpaper" src="../../RESOURCES/IMAGES/pc-background.avif" alt="">
         <div class="blockSelect" id="desktopContainer">
-            <div class="desktopIconGroup blockSelect" data-appname="FavoriteGames">
+            <div class="desktopIconGroup blockSelect" style="background-image: url('../../RESOURCES/IMAGES/gameLauncherIcon.png');" data-appname="FavoriteGames">
                 <p class="appTitle blockSelect">Games.exe</p>
             </div>
+
+            <!-- Minecraft -->
+            <div class="desktopIconGroup blockSelect" style="background-image: url('../../RESOURCES/IMAGES/ !!!!!! );" data-appname="Guide">
+                <p class="appTitle blockSelect">Minecraft Guide.exe</p>
+            </div>
+            <!-- Minecraft -->
+             
             <div id="taskBar">
                 <div id="startButton">
                     <i>start</i>
@@ -22,10 +29,22 @@
                 </div>
             </div>
         </div>
+        
+        <div id="MinecraftGuide" style="position: absolute; z-index: -1;" >
+            <div id="topBar">
+                <div class="blockSelect" id="topWindowTitle">Minecraft-Guide.exe</div>
+                <div class="xButton blockSelect">X</div>
+            </div>
+            <iframe src="./COMPUTER_WINDOWS/minecraft.html"  frameborder="0"></iframe>
+        </div>
+            
+        </iframe>
+
+        <!-- \/ Favorite Games \/ -->
         <div id="gamesApp">
             <div id="topBar">
                 <div class="blockSelect" id="topWindowTitle">Favorite-Games.exe</div>
-                <div class="blockSelect" id="xButton">X</div>
+                <div class="xButton blockSelect">X</div>
             </div>
             <div class="blockSelect" id="favoriteGamesTitle">Favorite Games</div>
             <img class="blockSelect" id="vignette" src="../../RESOURCES/IMAGES/Vignette.png" alt="vignette">

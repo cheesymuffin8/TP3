@@ -9,7 +9,8 @@ const vignette = document.getElementById("vignette")
 const closeExamButton = document.getElementById("closeExamButton")
 
 const appWindows = {
-    "FavoriteGames": document.getElementById("gamesApp")
+    "FavoriteGames": document.getElementById("gamesApp"),
+    "Guide": document.getElementById("MinecraftGuide")
 }
 
 for (let i = 0; i < desktopIconGroups.length; i++) {
@@ -27,7 +28,7 @@ for (let i = 0; i < desktopIconGroups.length; i++) {
 
 for (const name in appWindows) {
     const app = appWindows[name];
-    const xButton = app.querySelector("#xButton");
+    const xButton = app.querySelector(".xButton");
 
     xButton.addEventListener("click", () => {
         app.style.zIndex = "-1";

@@ -26,6 +26,30 @@ export const games = {
     desc: `Black Mesa is the fan-made reimagining of Valve Software’s Half-Life.<br>
     You are Gordon Freeman, a theoretical physicist at the Black Mesa Research Facility. When a routine experiment goes horribly wrong, you must fight your way through an interdimensional alien invasion, and a bloodthirsty military clean-up crew in order to save the science team... and the world!`
   },
+  "FC5": {
+    name: `Far Cry 5`,
+    desc: `Welcome to Hope County, Montana, the land of the free and brave, but also the home of a fanatical doomsday cult. Stand up to cult leader Joseph Seed and his siblings, the Heralds, to spark the fires of resistance and liberate the besieged community.
+    <br>
+    <br>
+    Play solo or two-player co-op in the vast open world of Hope County. Use a vast arsenal of weapons from rocket launchers to shovels, and take control of iconic muscle cars, ATVs, planes, and more to engage the cult forces in epic fights.
+    <br>
+    <br>
+    DISCOVER ONE OF THE MOST ACCLAIMED FAR CRY GAMES<br>
+    Join the millions of players in the Far Cry® 5 community and discover what IGN describes as “fast-paced fun.”
+    <br>
+    <br>
+    FIGHT AGAINST THE DEADLY CULT OF JOSEPH SEED<br>
+    Free Hope County from the Eden's Gate cult and the Seed family. Discover the first appearance of the charismatic antagonist Joseph Seed, before his return in Far Cry® New Dawn and his own dedicated DLC in Far Cry® 6, Collapse.
+    <br>
+    <br>
+    EXPLORE THE HOPE COUNTY OPEN WORLD SOLO OR CO-OP AND MAKE YOUR OWN RULES<br>
+    Play solo or two-player co-op in the vast open world of Hope County. Use a vast arsenal of weapons from rocket launchers to shovels, and take control of iconic muscle cars, ATVs, planes, and more to engage the cult forces in epic fights. Ally with the Fangs for Hire group, including fan-favorite bear Cheeseburger and dog Boomer, and free Hope County from its oppressors.
+    `
+  },
+  "BONEWORKS": {
+    name: `BONEWORKS`,
+    desc: `BONEWORKS Is a narrative VR action adventure using advanced experimental physics mechanics. Dynamically navigate through environments, engage in physics heavy combat, and creatively approach puzzles with physics.`
+  },
 };
 
 // Helper function to get a song by file name
