@@ -15,14 +15,12 @@ for (let i = 0; i < recordGroups.length; i++) {
     group.addEventListener("mouseover", () => {
         const recordSelf = group.querySelector(".recordSelf");
         recordSelf.style.animation = "showRecord 0.5s ease-in-out forwards";
-        group.style.animation = "growRecordGroup 0.2s ease-in-out forwards";
         group.style.cursor = "pointer";
     });
 
     group.addEventListener("mouseout", () => {
         const recordSelf = group.querySelector(".recordSelf");
         recordSelf.style.animation = "hideRecord 0.5s ease-in-out forwards";
-        group.style.animation = "shrinkRecordGroup 0.2s ease-in-out forwards";
     });
 
     group.addEventListener("click", () => {
