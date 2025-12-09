@@ -27,6 +27,7 @@ html, body {
     border-radius: 100%;
     border-width: 10px;
 }
+
 .moveLink:hover{
     background-image: url("../RESOURCES/IMAGES/INTERACTIVE/Arrow_02.png");
 }

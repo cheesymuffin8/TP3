@@ -4,12 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../CSS/PERSONAL_PAGES_CSS/drawingBook.css">
-    <title>record store</title>
+    <title>art</title>
 </head>
 <body>
     <div id="background">
-        <img id="book" src="../../RESOURCES/IMAGES/drawingBooklet.png" alt="drawing book">
-        
+        <a href="../FLOORS/floor_02.html" id="backButton">BACK</a>
+        <img class="blockSelect" id="book" src="../../RESOURCES/IMAGES/drawingBooklet.png" alt="drawing book">
+        <div class="blockSelect" id="drawingContainer">
+            <img class="blockSelect" id="drawingArt" src="../../RESOURCES/IMAGES/DRAWINGS/1.avif" alt="">
+        </div>
+        <div class="dirButton blockSelect" id="nextDrawingButton">
+            <img class="arrow" src="../../RESOURCES/IMAGES/INTERACTIVE/RightArrow.png" alt="">
+        </div>
+        <div class="dirButton blockSelect" id="prevDrawingButton">
+            <img class="arrow" src="../../RESOURCES/IMAGES/INTERACTIVE/LeftArrow.png" alt="">
+        </div>
     </div>
 </body>
+<script src="../../JS/drawingBook.js"></script>
+<script src="../../JS/blockImageDragging.js"></script>
 </html>

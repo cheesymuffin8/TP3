@@ -12,7 +12,6 @@ const sourceElement = playerAudio.querySelector('source');
 for (let i = 0; i < recordGroups.length; i++) {
     const group = recordGroups[i];
 
-    // Hover animations (optional)
     group.addEventListener("mouseover", () => {
         const recordSelf = group.querySelector(".recordSelf");
         recordSelf.style.animation = "showRecord 0.5s ease-in-out forwards";

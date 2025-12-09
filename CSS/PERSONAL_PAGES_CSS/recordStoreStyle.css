@@ -24,8 +24,8 @@ body::-webkit-scrollbar {
     position: fixed;
     top: 0%;
     background:
-        url(../RESOURCES/IMAGES/TEXTURES/wood_table_worn_ao_2k.jpg),
-        url(../RESOURCES/IMAGES/TEXTURES/wood_table_worn_diff_2k.jpg);
+        url(../../RESOURCES/IMAGES/TEXTURES/wood_table_worn_ao_2k.jpg),
+        url(../../RESOURCES/IMAGES/TEXTURES/wood_table_worn_diff_2k.jpg);
     background-repeat: both repeat;
     background-size: 30%;
     background-blend-mode: multiply;
@@ -49,91 +49,91 @@ body::-webkit-scrollbar {
 
 @font-face {
     font-family: "schoolbell";
-    src: url(../RESOURCES/FONTS/Schoolbell-Regular.ttf);
+    src: url(../../RESOURCES/FONTS/Schoolbell-Regular.ttf);
 }
 .w1 {
     font-family: "schoolbell", Arial, Helvetica, sans-serif;
 }
 @font-face {
     font-family: "sendFlowers";
-    src: url(../RESOURCES/FONTS/SendFlowers-Regular.ttf);
+    src: url(../../RESOURCES/FONTS/SendFlowers-Regular.ttf);
 }
 .w2 {
     font-family: "sendFlowers", Arial, Helvetica, sans-serif;
 }
 @font-face {
     font-family: "satisfy";
-    src: url(../RESOURCES/FONTS/Satisfy-Regular.ttf);
+    src: url(../../RESOURCES/FONTS/Satisfy-Regular.ttf);
 }
 .w3 {
     font-family: "satisfy", Arial, Helvetica, sans-serif;
 }
 @font-face {
     font-family: "skranji";
-    src: url(../RESOURCES/FONTS/Skranji-Regular.ttf);
+    src: url(../../RESOURCES/FONTS/Skranji-Regular.ttf);
 }
 .w4 {
     font-family: "skranji", Arial, Helvetica, sans-serif;
 }
 @font-face {
     font-family: "sankofaDisplay";
-    src: url(../RESOURCES/FONTS/SankofaDisplay-Regular.ttf);
+    src: url(../../RESOURCES/FONTS/SankofaDisplay-Regular.ttf);
 }
 .w5 {
     font-family: "sankofaDisplay", Arial, Helvetica, sans-serif;
 }
 @font-face {
     font-family: "rubikIso";
-    src: url(../RESOURCES/FONTS/RubikIso-Regular.ttf);
+    src: url(../../RESOURCES/FONTS/RubikIso-Regular.ttf);
 }
 .w6 {
     font-family: "rubikIso", Arial, Helvetica, sans-serif;
 }
 @font-face {
     font-family: "rosarivo";
-    src: url(../RESOURCES/FONTS/Rosarivo-Regular.ttf);
+    src: url(../../RESOURCES/FONTS/Rosarivo-Regular.ttf);
 }
 .w7 {
     font-family: "rosarivo", Arial, Helvetica, sans-serif;
 }
 @font-face {
     font-family: "sixCaps";
-    src: url(../RESOURCES/FONTS/SixCaps-Regular.ttf);
+    src: url(../../RESOURCES/FONTS/SixCaps-Regular.ttf);
 }
 .w8 {
     font-family: "sixCaps", Arial, Helvetica, sans-serif;
 }
 @font-face {
     font-family: "rubikMonoOne";
-    src: url(../RESOURCES/FONTS/RubikMonoOne-Regular.ttf);
+    src: url(../../RESOURCES/FONTS/RubikMonoOne-Regular.ttf);
 }
 .w9 {
     font-family: "rubikMonoOne", Arial, Helvetica, sans-serif;
 }
 @font-face {
     font-family: "redressed";
-    src: url(../RESOURCES/FONTS/Redressed-Regular.ttf);
+    src: url(../../RESOURCES/FONTS/Redressed-Regular.ttf);
 }
 .w10 {
     font-family: "redressed", Arial, Helvetica, sans-serif;
 }
 @font-face {
     font-family: "shizuru";
-    src: url(../RESOURCES/FONTS/Shizuru-Regular.ttf);
+    src: url(../../RESOURCES/FONTS/Shizuru-Regular.ttf);
 }
 .w11 {
     font-family: "shizuru", Arial, Helvetica, sans-serif;
 }
 @font-face {
     font-family: "shareTechMono";
-    src: url(../RESOURCES/FONTS/ShareTechMono-Regular.ttf);
+    src: url(../../RESOURCES/FONTS/ShareTechMono-Regular.ttf);
 }
 .w12 {
     font-family: "shareTechMono", Arial, Helvetica, sans-serif;
 }
 @font-face {
     font-family: "silkscreen";
-    src: url(../RESOURCES/FONTS/Silkscreen-Regular.ttf);
+    src: url(../../RESOURCES/FONTS/Silkscreen-Regular.ttf);
 }
 .w13 {
     font-family: "silkscreen", Arial, Helvetica, sans-serif;
@@ -173,7 +173,7 @@ body::-webkit-scrollbar {
 
 @font-face {
     font-family: "Inter";
-    src: url(../RESOURCES/FONTS/Inter-VariableFont_opsz\,wght.ttf);
+    src: url(../../RESOURCES/FONTS/Inter-VariableFont_opsz\,wght.ttf);
 }
 
 #playerTitle {
@@ -264,7 +264,7 @@ body::-webkit-scrollbar {
 
 .shelfRow {
     display: flex;
-    background-image: url(../RESOURCES/IMAGES/Shelf.png);
+    background-image: url(../../RESOURCES/IMAGES/Shelf.png);
     width: 30%;
     aspect-ratio: 16/9;
     background-size: cover;
