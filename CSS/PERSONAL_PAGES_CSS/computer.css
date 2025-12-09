@@ -323,6 +323,7 @@ html, body {
 }
 
 /* transformer le fond paysage par le monde Minecraft*/
+
 #MinecraftGuide {
     display: flex;
     position: absolute;
@@ -338,43 +339,7 @@ html, body {
     top: 24.6%;
 }
 
-/* Minecraft */
-
-.gameCoverGroupMinecraft {
-    display: flex;
-    position: relative;
-    background-color: rgba(0, 0, 0, 0);
-    height: 27vh;
-    aspect-ratio: 2/3;
-    border-radius: 1vh;
-    margin-left: 0.5vh;
-    margin-right: 0.5vh;
-    transition: height 0.1s ease-in-out;
-}
-.gameCoverGroupMinecraft:hover {
-    height: 27.5vh;
-    filter: brightness(115%);
-}
-.gameCoverGroupMinecraft:active {
-    filter: brightness(90%);
-}
-
-.Minecraft element {
-   border-radius: 1vh; 
-}
-
-#gameRibbon {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    position: absolute;
-    overflow-x: scroll;
-    bottom: 5vh;
-    width: 79.6vh;
-    height: 30vh;
-    padding-left: 0.5vh;
-    padding-right: 0.5vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    scrollbar-color: rgba(255, 255, 255, 0.5) rgba(0, 0, 0, 0.5);
-    scrollbar-width:auto;
+#minecraftWebsite {
+    aspect-ratio: 16/9.4;
+    height: 47.8vh;
 }
